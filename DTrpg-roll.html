@@ -1,0 +1,143 @@
+<!doctype html>
+
+<html lang="gr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="DTstyle.css">
+		<title>Dice Roller</title>
+</head>
+	
+<body>
+
+<div class="page-container">
+	<div class="page-welcome">
+	
+		<div class="logo-game-nav">
+		
+			<a class="logo" href="index.html">
+			</a>
+		
+			<div class="games-menu">
+			<a  href="rpg-games.html"><img name="rpg" src="images/RPG.png"></a>
+								
+			<a href="card-games.html"><img name="card" src="images/CARD.png"></a>
+			
+			<a href="war-games.html"><img class="current" name=	"war" src="images/WAR.png"></a>
+			
+			<a href="board-games.html"><img name="board" src="images/BOARD.png"></a>
+			</div>
+		</div>
+		
+		<div class="main-nav">
+			<a href="articles-page.html">ΑΡΘΡΑ</a>
+			<a href="#">ΠΡΟΓΡΑΜΜΑ</a>
+			<a href="#">ΠΟΙΟΙ ΕΙΜΑΣΤΕ</a>
+			<a href="#">ΑΡΧΗΓΟΣ</a>	
+		</div>
+	</div>
+	
+	<div class="content-container">
+		
+		<main class="light-bg">	
+						
+		<h1 class="dark-text">Ρίξε Ζάρια</h3>
+		
+			<div class="dice-options light-bg">		
+			
+			<h2>Επίλεξε τύπο ζαριού</h2>
+			
+			<div class="dtype">
+			
+			<img id="4"  onclick="typeSelection()" src="images/dice/d4.png" alt="d4">
+				
+			<img id="6" onclick="typeSelection()" src="images/dice/d6.png" alt="d6">
+						
+			<img id="8"  onclick="typeSelection()" src="images/dice/d8.png" alt="d8">
+				
+			<img id="10" onclick="typeSelection()" src="images/dice/d10.png" alt="d10">
+			
+			<img id="12" onclick="typeSelection()" src="images/dice/d12.png" alt="d12">
+				
+			<img id="20" onclick="typeSelection()" src="images/dice/d20.png" alt="d20">
+				
+			<img id="100" onclick="typeSelection()" src="images/dice/d100.png" alt="d100">
+			</div>
+			
+			<div class="selected-options">
+			
+			<h2>Θα ρίξεις</h2>
+			
+			<input class="light-text" type="number" min="1" max="100" placeholder="1" id="diceNumber"><h2> d<span id="selectedType">20</span></h2>
+			
+			</div>
+			<div onclick="rollDice()" id="result-bg">
+				<h1  id="result">
+				20</h1>
+			</div>
+			<p class="light-text" id="diceLog">Ιστορικό ζαριών.</p>
+						
+		</div>				
+								
+		</main>
+		
+		<div class="sidebar dark-text light-bg">
+		
+				<h2>Dragon Tale Social</h2>
+				
+			<div class="sidebar-item-group">
+			
+				<a target="_blank" href="https://www.facebook.com/groups/222983924449825/" class="fa fa-facebook"></a>
+			
+			</div>
+			
+			<hr>
+			
+			<h2>Δημοφιλή Άρθρα</h2>
+			
+			<div class="sidebar-item-group">
+			
+				<div class="sidebar-item">	
+					<div class="article-box light-bg">
+					<a class="dark-text" href="eisagwgh-sta-rpg.html">
+					<img src="images/diceGame.jpg"><h3>"Εισαγωγή στα παιχνίδια ρόλων"</h3></a>
+					</div>
+				</div>
+				
+				<div class="sidebar-item">	
+					<div class="article-box light-bg">
+					<a class="dark-text" href="age-of-sigmar.html">
+					<img src="images/article-img-temp.jpg"><h3>"Age of Sigmar: "Hype", ή μία τρύπα στο νερό;"</h3></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	
+	<footer class="footer">
+	<!-- Footer Menu -->
+	<div class="footer-nav">
+	
+		<a href="index.html"><img class="footer-logo" src="images/logo-white.png"></a>
+		
+		<div class="footer-nav-links">
+			<a class="<?php if($page=='biografiko'){echo 'active-nav';} ?> light-text" href="bio.html">ΒΙΟΓΡΑΦΙΚΟ</a>
+		
+			<a class="<?php if($page=='katastatiko'){echo 'active-nav';} ?> light-text" href="katastatiko.html">ΚΑΤΑΣΤΑΤΙΚΟ</a>
+		
+			<a class="<?php if($page=='xrisimalinks'){echo 'active-nav';} ?> light-text" href="under-construction.html">ΧΡΗΣΙΜΑ LINKS</a>
+		</div>
+	</div>	
+		<div class="footer-credits light-text">
+			<h5>&#169; 2020 Orestis Marselos. All Rights Reserved</h5>
+		</div>
+		
+	</footer>
+</div>	
+
+<script src="DMscript.js"></script>
+
+</body>
+</html>
